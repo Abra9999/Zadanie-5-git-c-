@@ -1,0 +1,20 @@
+Napisz w dwuosobowych zespołach program obliczający ilość czystej substancji czynnej w roztworze.
+
+Dane wejściowe od użytkownika:
+•	pojemność naczynia,
+•	procentowa zawartość substancji,
+•	liczba sztuk naczyń.
+
+Wyniki:
+•	łączna objętość płynu,
+•	objętość czystej substancji.
+
+Organizacja pracy:
+1.	jedna osoba odpowiada za "logikę" programu, druga za GUI
+2.	chcemy mieć sensowną historię zmian GIT (tzn. nie na zasadzie, że mamy tylko jedną dużą zmianę, zawierającą ostateczną wersję)
+
+Wersje bogatsze:
+1.	możliwość wybrania z listy jednego z typowych naczyń, np. kieliszek 50, szklanka (na 4.5) 
+2.	możliwość wybrania z listy jednego z typowych roztworów (na 5.5)
+3.	logika wie wszystko o typowych (na 6)
+
