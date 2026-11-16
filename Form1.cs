@@ -9,11 +9,20 @@ namespace Zadanie5_github
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             decimal totalVolume = numCapacity.Value * numCount.Value;
             decimal pureSubstance = totalVolume * numPercentage.Value / 100m;
 
             txtTotalVolume.Text = $"{totalVolume:0.0} ml";
             txtPureSubstance.Text = $"{pureSubstance:0.0} ml";
+=======
+            // Miejsce na wywołanie logiki obliczeń
+
+            decimal totalVolume = numCapacity.Value * numCount.Value;
+            decimal pureSubstance = totalVolume * numPercentage.Value / 100;
+            txtTotalVolume.Text = totalVolume.ToString("0.0") + " ml";
+            txtPureSubstance.Text = pureSubstance.ToString("0.0") + " ml";
+>>>>>>> Stashed changes
         }
 
         private void btnClear_Click(object sender, EventArgs e)
