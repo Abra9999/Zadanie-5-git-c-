@@ -98,6 +98,15 @@
             cmbTypicalVessels.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
             cmbTypicalVessels.ForeColor = Color.White;
             cmbTypicalVessels.FormattingEnabled = true;
+            cmbTypicalVessels.Items.AddRange(new object[] {
+            "-- Własna pojemność --",
+            "Kieliszek (50 ml)",
+            "Filiżanka (150 ml)",
+            "Szklanka (250 ml)",
+            "Kubek (330 ml)",
+            "Puszka / Butelka (500 ml)",
+            "Butelka (1000 ml)"
+            });
             cmbTypicalVessels.Location = new Point(210, 32);
             cmbTypicalVessels.Name = "cmbTypicalVessels";
             cmbTypicalVessels.Size = new Size(205, 23);
@@ -149,6 +158,16 @@
             cmbTypicalSolutions.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
             cmbTypicalSolutions.ForeColor = Color.White;
             cmbTypicalSolutions.FormattingEnabled = true;
+            cmbTypicalSolutions.Items.AddRange(new object[] {
+            "-- Własne stężenie --",
+            "Woda (0%)",
+            "Sól fizjologiczna (0,9%)",
+            "Piwo jasne (5%)",
+            "Ocet spirytusowy (10%)",
+            "Wino wytrawne (12%)",
+            "Wódka (40%)",
+            "Spirytus rektyfikowany (95%)"
+            });
             cmbTypicalSolutions.Location = new Point(210, 127);
             cmbTypicalSolutions.Name = "cmbTypicalSolutions";
             cmbTypicalSolutions.Size = new Size(205, 23);
