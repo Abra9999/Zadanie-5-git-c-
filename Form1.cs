@@ -9,9 +9,11 @@ namespace Zadanie5_github
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-            // Miejsce na wywołanie logiki obliczeń
-            MessageBox.Show("Temp | btnCalculate");
+            decimal totalVolume = numCapacity.Value * numCount.Value;
+            decimal pureSubstance = totalVolume * numPercentage.Value / 100m;
 
+            txtTotalVolume.Text = $"{totalVolume:0.0} ml";
+            txtPureSubstance.Text = $"{pureSubstance:0.0} ml";
         }
 
         private void btnClear_Click(object sender, EventArgs e)
