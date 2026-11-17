@@ -33,6 +33,7 @@ namespace Zadanie5_github
         private void btnClear_Click(object sender, EventArgs e)
         {
             cmbTypicalVessels.SelectedIndex = 0;
+            cmbTypicalSolutions.SelectedIndex = 0;
             numCapacity.Value = 0;
             numPercentage.Value = 0;
             numCount.Value = 1;
@@ -56,8 +57,17 @@ namespace Zadanie5_github
 
         private void cmbTypicalSolutions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Miejsce na obsługę wyboru typowego roztworu z logiki
-            MessageBox.Show("Test: cmbTypicalSolutions_SelectedIndexChanged");
+            // indeks 0 to własne stężenie, więc nic nie ustawiamy
+            switch (cmbTypicalSolutions.SelectedIndex)
+            {
+                case 1: numPercentage.Value = 0; break;     // woda
+                case 2: numPercentage.Value = 0.9m; break;  // sól fizjologiczna
+                case 3: numPercentage.Value = 5; break;     // piwo
+                case 4: numPercentage.Value = 10; break;    // ocet
+                case 5: numPercentage.Value = 12; break;    // wino
+                case 6: numPercentage.Value = 40; break;    // wódka
+                case 7: numPercentage.Value = 95; break;    // spirytus
+            }
         }
     }
 }
