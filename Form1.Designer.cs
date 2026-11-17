@@ -36,26 +36,23 @@
             lblTotalVolume = new Label();
             txtPureSubstance = new TextBox();
             lblPureSubstance = new Label();
-
             gbInputs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCapacity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numPercentage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numCount).BeginInit();
             gbResults.SuspendLayout();
             SuspendLayout();
-
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblTitle.Font = new Font("Yu Gothic UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTitle.ForeColor = Color.FromArgb(56, 189, 248);
-            lblTitle.Location = new Point(25, 20);
+            lblTitle.Location = new Point(25, 9);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(340, 30);
+            lblTitle.Size = new Size(413, 37);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Kalkulator Objętości Roztworów";
-
             // 
             // gbInputs
             // 
@@ -69,7 +66,7 @@
             gbInputs.Controls.Add(lblPercentage);
             gbInputs.Controls.Add(numCount);
             gbInputs.Controls.Add(lblCount);
-            gbInputs.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            gbInputs.Font = new Font("Yu Gothic UI", 17.75F, FontStyle.Bold);
             gbInputs.ForeColor = Color.FromArgb(226, 232, 240);
             gbInputs.Location = new Point(25, 65);
             gbInputs.Name = "gbInputs";
@@ -77,144 +74,107 @@
             gbInputs.TabIndex = 1;
             gbInputs.TabStop = false;
             gbInputs.Text = "Dane wejściowe";
-
-            // 
-            // lblTypicalVessels
-            // 
-            lblTypicalVessels.AutoSize = true;
-            lblTypicalVessels.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblTypicalVessels.Location = new Point(20, 35);
-            lblTypicalVessels.Name = "lblTypicalVessels";
-            lblTypicalVessels.Size = new Size(165, 17);
-            lblTypicalVessels.TabIndex = 0;
-            lblTypicalVessels.Text = "Typowe naczynie (opcja):";
-
             // 
             // cmbTypicalVessels
             // 
             cmbTypicalVessels.BackColor = Color.FromArgb(51, 65, 85);
             cmbTypicalVessels.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTypicalVessels.FlatStyle = FlatStyle.Flat;
-            cmbTypicalVessels.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            cmbTypicalVessels.Font = new Font("Segoe UI", 9.5F);
             cmbTypicalVessels.ForeColor = Color.White;
             cmbTypicalVessels.FormattingEnabled = true;
-            cmbTypicalVessels.Items.AddRange(new object[] {
-            "-- Własna pojemność --",
-            "Kieliszek (50 ml)",
-            "Filiżanka (150 ml)",
-            "Szklanka (250 ml)",
-            "Kubek (330 ml)",
-            "Puszka / Butelka (500 ml)",
-            "Butelka (1000 ml)"
-            });
+            cmbTypicalVessels.Items.AddRange(new object[] { "-- Własna pojemność --", "Kieliszek (50 ml)", "Filiżanka (150 ml)", "Szklanka (250 ml)", "Kubek (330 ml)", "Puszka / Butelka (500 ml)", "Butelka (1000 ml)" });
             cmbTypicalVessels.Location = new Point(210, 32);
             cmbTypicalVessels.Name = "cmbTypicalVessels";
-            cmbTypicalVessels.Size = new Size(205, 23);
+            cmbTypicalVessels.Size = new Size(205, 25);
             cmbTypicalVessels.TabIndex = 1;
             cmbTypicalVessels.SelectedIndexChanged += cmbTypicalVessels_SelectedIndexChanged;
-
             // 
-            // lblCapacity
+            // lblTypicalVessels
             // 
-            lblCapacity.AutoSize = true;
-            lblCapacity.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblCapacity.Location = new Point(20, 80);
-            lblCapacity.Name = "lblCapacity";
-            lblCapacity.Size = new Size(161, 17);
-            lblCapacity.TabIndex = 2;
-            lblCapacity.Text = "Pojemność naczynia [ml]:";
-
+            lblTypicalVessels.AutoSize = true;
+            lblTypicalVessels.Font = new Font("Segoe UI", 9.5F);
+            lblTypicalVessels.Location = new Point(20, 35);
+            lblTypicalVessels.Name = "lblTypicalVessels";
+            lblTypicalVessels.Size = new Size(152, 17);
+            lblTypicalVessels.TabIndex = 0;
+            lblTypicalVessels.Text = "Typowe naczynie (opcja):";
             // 
             // numCapacity
             // 
             numCapacity.BackColor = Color.FromArgb(51, 65, 85);
             numCapacity.BorderStyle = BorderStyle.FixedSingle;
             numCapacity.DecimalPlaces = 1;
-            numCapacity.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            numCapacity.Font = new Font("Segoe UI", 9.5F);
             numCapacity.ForeColor = Color.White;
             numCapacity.Location = new Point(210, 78);
             numCapacity.Maximum = new decimal(new int[] { 100000, 0, 0, 0 });
             numCapacity.Name = "numCapacity";
             numCapacity.Size = new Size(205, 24);
             numCapacity.TabIndex = 3;
-
             // 
-            // lblTypicalSolutions
+            // lblCapacity
             // 
-            lblTypicalSolutions.AutoSize = true;
-            lblTypicalSolutions.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblTypicalSolutions.Location = new Point(20, 130);
-            lblTypicalSolutions.Name = "lblTypicalSolutions";
-            lblTypicalSolutions.Size = new Size(163, 17);
-            lblTypicalSolutions.TabIndex = 4;
-            lblTypicalSolutions.Text = "Typowy roztwór (opcja):";
-
+            lblCapacity.AutoSize = true;
+            lblCapacity.Font = new Font("Segoe UI", 9.5F);
+            lblCapacity.Location = new Point(20, 80);
+            lblCapacity.Name = "lblCapacity";
+            lblCapacity.Size = new Size(153, 17);
+            lblCapacity.TabIndex = 2;
+            lblCapacity.Text = "Pojemność naczynia [ml]:";
             // 
             // cmbTypicalSolutions
             // 
             cmbTypicalSolutions.BackColor = Color.FromArgb(51, 65, 85);
             cmbTypicalSolutions.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTypicalSolutions.FlatStyle = FlatStyle.Flat;
-            cmbTypicalSolutions.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            cmbTypicalSolutions.Font = new Font("Segoe UI", 9.5F);
             cmbTypicalSolutions.ForeColor = Color.White;
             cmbTypicalSolutions.FormattingEnabled = true;
-            cmbTypicalSolutions.Items.AddRange(new object[] {
-            "-- Własne stężenie --",
-            "Woda (0%)",
-            "Sól fizjologiczna (0,9%)",
-            "Piwo jasne (5%)",
-            "Ocet spirytusowy (10%)",
-            "Wino wytrawne (12%)",
-            "Wódka (40%)",
-            "Spirytus rektyfikowany (95%)"
-            });
+            cmbTypicalSolutions.Items.AddRange(new object[] { "-- Własne stężenie --", "Woda (0%)", "Sól fizjologiczna (0,9%)", "Piwo jasne (5%)", "Ocet spirytusowy (10%)", "Wino wytrawne (12%)", "Wódka (40%)", "Spirytus rektyfikowany (95%)" });
             cmbTypicalSolutions.Location = new Point(210, 127);
             cmbTypicalSolutions.Name = "cmbTypicalSolutions";
-            cmbTypicalSolutions.Size = new Size(205, 23);
+            cmbTypicalSolutions.Size = new Size(205, 25);
             cmbTypicalSolutions.TabIndex = 5;
             cmbTypicalSolutions.SelectedIndexChanged += cmbTypicalSolutions_SelectedIndexChanged;
-
             // 
-            // lblPercentage
+            // lblTypicalSolutions
             // 
-            lblPercentage.AutoSize = true;
-            lblPercentage.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblPercentage.Location = new Point(20, 175);
-            lblPercentage.Name = "lblPercentage";
-            lblPercentage.Size = new Size(173, 17);
-            lblPercentage.TabIndex = 6;
-            lblPercentage.Text = "Zawartość substancji [%]:";
-
+            lblTypicalSolutions.AutoSize = true;
+            lblTypicalSolutions.Font = new Font("Segoe UI", 9.5F);
+            lblTypicalSolutions.Location = new Point(20, 130);
+            lblTypicalSolutions.Name = "lblTypicalSolutions";
+            lblTypicalSolutions.Size = new Size(147, 17);
+            lblTypicalSolutions.TabIndex = 4;
+            lblTypicalSolutions.Text = "Typowy roztwór (opcja):";
             // 
             // numPercentage
             // 
             numPercentage.BackColor = Color.FromArgb(51, 65, 85);
             numPercentage.BorderStyle = BorderStyle.FixedSingle;
             numPercentage.DecimalPlaces = 1;
-            numPercentage.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            numPercentage.Font = new Font("Segoe UI", 9.5F);
             numPercentage.ForeColor = Color.White;
             numPercentage.Location = new Point(210, 173);
             numPercentage.Name = "numPercentage";
             numPercentage.Size = new Size(205, 24);
             numPercentage.TabIndex = 7;
-
             // 
-            // lblCount
+            // lblPercentage
             // 
-            lblCount.AutoSize = true;
-            lblCount.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblCount.Location = new Point(20, 225);
-            lblCount.Name = "lblCount";
-            lblCount.Size = new Size(141, 17);
-            lblCount.TabIndex = 8;
-            lblCount.Text = "Liczba sztuk naczyń:";
-
+            lblPercentage.AutoSize = true;
+            lblPercentage.Font = new Font("Segoe UI", 9.5F);
+            lblPercentage.Location = new Point(20, 175);
+            lblPercentage.Name = "lblPercentage";
+            lblPercentage.Size = new Size(154, 17);
+            lblPercentage.TabIndex = 6;
+            lblPercentage.Text = "Zawartość substancji [%]:";
             // 
             // numCount
             // 
             numCount.BackColor = Color.FromArgb(51, 65, 85);
             numCount.BorderStyle = BorderStyle.FixedSingle;
-            numCount.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            numCount.Font = new Font("Segoe UI", 9.5F);
             numCount.ForeColor = Color.White;
             numCount.Location = new Point(210, 223);
             numCount.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
@@ -223,7 +183,16 @@
             numCount.Size = new Size(205, 24);
             numCount.TabIndex = 9;
             numCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
-
+            // 
+            // lblCount
+            // 
+            lblCount.AutoSize = true;
+            lblCount.Font = new Font("Segoe UI", 9.5F);
+            lblCount.Location = new Point(20, 225);
+            lblCount.Name = "lblCount";
+            lblCount.Size = new Size(123, 17);
+            lblCount.TabIndex = 8;
+            lblCount.Text = "Liczba sztuk naczyń:";
             // 
             // btnCalculate
             // 
@@ -240,7 +209,6 @@
             btnCalculate.Text = "OBLICZ";
             btnCalculate.UseVisualStyleBackColor = false;
             btnCalculate.Click += btnCalculate_Click;
-
             // 
             // btnClear
             // 
@@ -248,7 +216,7 @@
             btnClear.Cursor = Cursors.Hand;
             btnClear.FlatAppearance.BorderSize = 0;
             btnClear.FlatStyle = FlatStyle.Flat;
-            btnClear.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            btnClear.Font = new Font("Segoe UI", 10F);
             btnClear.ForeColor = Color.White;
             btnClear.Location = new Point(320, 375);
             btnClear.Name = "btnClear";
@@ -257,7 +225,6 @@
             btnClear.Text = "Wyczyść";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
-
             // 
             // gbResults
             // 
@@ -265,7 +232,7 @@
             gbResults.Controls.Add(lblTotalVolume);
             gbResults.Controls.Add(txtPureSubstance);
             gbResults.Controls.Add(lblPureSubstance);
-            gbResults.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            gbResults.Font = new Font("Yu Gothic UI", 17.75F, FontStyle.Bold);
             gbResults.ForeColor = Color.FromArgb(56, 189, 248);
             gbResults.Location = new Point(490, 65);
             gbResults.Name = "gbResults";
@@ -273,19 +240,6 @@
             gbResults.TabIndex = 4;
             gbResults.TabStop = false;
             gbResults.Text = "Wyniki obliczeń";
-
-            // 
-            // lblTotalVolume
-            // 
-            lblTotalVolume.AutoSize = true;
-            lblTotalVolume.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblTotalVolume.ForeColor = Color.FromArgb(226, 232, 240);
-            lblTotalVolume.Location = new Point(20, 45);
-            lblTotalVolume.Name = "lblTotalVolume";
-            lblTotalVolume.Size = new Size(173, 17);
-            lblTotalVolume.TabIndex = 0;
-            lblTotalVolume.Text = "Łączna objętość płynu [ml]:";
-
             // 
             // txtTotalVolume
             // 
@@ -300,19 +254,17 @@
             txtTotalVolume.TabIndex = 1;
             txtTotalVolume.Text = "0,0 ml";
             txtTotalVolume.TextAlign = HorizontalAlignment.Right;
-
             // 
-            // lblPureSubstance
+            // lblTotalVolume
             // 
-            lblPureSubstance.AutoSize = true;
-            lblPureSubstance.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
-            lblPureSubstance.ForeColor = Color.FromArgb(226, 232, 240);
-            lblPureSubstance.Location = new Point(20, 145);
-            lblPureSubstance.Name = "lblPureSubstance";
-            lblPureSubstance.Size = new Size(198, 17);
-            lblPureSubstance.TabIndex = 2;
-            lblPureSubstance.Text = "Objętość czystej substancji [ml]:";
-
+            lblTotalVolume.AutoSize = true;
+            lblTotalVolume.Font = new Font("Segoe UI", 9.5F);
+            lblTotalVolume.ForeColor = Color.FromArgb(226, 232, 240);
+            lblTotalVolume.Location = new Point(20, 45);
+            lblTotalVolume.Name = "lblTotalVolume";
+            lblTotalVolume.Size = new Size(165, 17);
+            lblTotalVolume.TabIndex = 0;
+            lblTotalVolume.Text = "Łączna objętość płynu [ml]:";
             // 
             // txtPureSubstance
             // 
@@ -327,14 +279,24 @@
             txtPureSubstance.TabIndex = 3;
             txtPureSubstance.Text = "0,0 ml";
             txtPureSubstance.TextAlign = HorizontalAlignment.Right;
-
+            // 
+            // lblPureSubstance
+            // 
+            lblPureSubstance.AutoSize = true;
+            lblPureSubstance.Font = new Font("Segoe UI", 9.5F);
+            lblPureSubstance.ForeColor = Color.FromArgb(226, 232, 240);
+            lblPureSubstance.Location = new Point(20, 145);
+            lblPureSubstance.Name = "lblPureSubstance";
+            lblPureSubstance.Size = new Size(192, 17);
+            lblPureSubstance.TabIndex = 2;
+            lblPureSubstance.Text = "Objętość czystej substancji [ml]:";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 41, 59);
-            ClientSize = new Size(800, 445);
+            ClientSize = new Size(799, 441);
             Controls.Add(gbResults);
             Controls.Add(btnClear);
             Controls.Add(btnCalculate);
@@ -342,6 +304,8 @@
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
+            MaximumSize = new Size(815, 480);
+            MinimumSize = new Size(815, 480);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Zadanie 5 - Kalkulator Roztworów";
