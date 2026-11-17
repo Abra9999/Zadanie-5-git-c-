@@ -9,38 +9,46 @@ namespace Zadanie5_github
 
         private void btnCalculate_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            decimal totalVolume = numCapacity.Value * numCount.Value;
-            decimal pureSubstance = totalVolume * numPercentage.Value / 100m;
+            // pobieramy dane z formularza
+            decimal capacity = numCapacity.Value;
+            decimal percentage = numPercentage.Value;
+            decimal count = numCount.Value;
 
-            txtTotalVolume.Text = $"{totalVolume:0.0} ml";
-            txtPureSubstance.Text = $"{pureSubstance:0.0} ml";
-=======
-            // Miejsce na wywołanie logiki obliczeń
+            // pojemność nie może być zerem
+            if (capacity <= 0)
+            {
+                MessageBox.Show("Podaj pojemność naczynia większą od zera.");
+                return;
+            }
 
-            decimal totalVolume = numCapacity.Value * numCount.Value;
-            decimal pureSubstance = totalVolume * numPercentage.Value / 100;
+            // liczymy
+            decimal totalVolume = capacity * count;
+            decimal pureSubstance = totalVolume * percentage / 100;
+
+            // wyświetlamy wyniki
             txtTotalVolume.Text = totalVolume.ToString("0.0") + " ml";
             txtPureSubstance.Text = pureSubstance.ToString("0.0") + " ml";
->>>>>>> Stashed changes
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            // Miejsce na czyszczenie pól formularza
-            MessageBox.Show("Temp | btnClear");
+            numCapacity.Value = 0;
+            numPercentage.Value = 0;
+            numCount.Value = 1;
+            txtTotalVolume.Text = "0,0 ml";
+            txtPureSubstance.Text = "0,0 ml";
         }
 
         private void cmbTypicalVessels_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Miejsce na obsługę wyboru typowego naczynia z logiki
-            MessageBox.Show("Temp | cmbTypicalVessels");
+            MessageBox.Show("Test: cmbTypicalVessels_SelectedIndexChanged");
         }
 
         private void cmbTypicalSolutions_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Miejsce na obsługę wyboru typowego roztworu z logiki
-            MessageBox.Show("Temp | cmbTypicalSolutions");
+            MessageBox.Show("Test: cmbTypicalSolutions_SelectedIndexChanged");
         }
     }
 }
