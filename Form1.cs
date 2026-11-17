@@ -32,6 +32,7 @@ namespace Zadanie5_github
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            cmbTypicalVessels.SelectedIndex = 0;
             numCapacity.Value = 0;
             numPercentage.Value = 0;
             numCount.Value = 1;
@@ -41,8 +42,16 @@ namespace Zadanie5_github
 
         private void cmbTypicalVessels_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Miejsce na obsługę wyboru typowego naczynia z logiki
-            MessageBox.Show("Test: cmbTypicalVessels_SelectedIndexChanged");
+            // indeks 0 to własna pojemność, więc nic nie ustawiamy
+            switch (cmbTypicalVessels.SelectedIndex)
+            {
+                case 1: numCapacity.Value = 50; break;    // kieliszek
+                case 2: numCapacity.Value = 150; break;   // filiżanka
+                case 3: numCapacity.Value = 250; break;   // szklanka
+                case 4: numCapacity.Value = 330; break;   // kubek
+                case 5: numCapacity.Value = 500; break;   // puszka / butelka
+                case 6: numCapacity.Value = 1000; break;  // butelka
+            }
         }
 
         private void cmbTypicalSolutions_SelectedIndexChanged(object sender, EventArgs e)
