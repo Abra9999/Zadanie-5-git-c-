@@ -5,6 +5,8 @@ namespace Zadanie5_github
         public Form1()
         {
             InitializeComponent();
+            cmbTypicalVessels.SelectedIndex = 0;
+            cmbTypicalSolutions.SelectedIndex = 0;
         } // super kod
 
         private void btnCalculate_Click(object sender, EventArgs e)
